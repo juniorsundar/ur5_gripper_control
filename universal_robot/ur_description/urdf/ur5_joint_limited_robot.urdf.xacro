@@ -21,6 +21,18 @@
     transmission_hw_interface="$(arg transmission_hw_interface)"
   />
 
+  <!-- Realsense Camera -->
+  <xacro:include filename="$(find ur5_control)/urdf/_d435.urdf.xacro" />
+
+  <xacro:sensor_d435 parent="world" name="camera_1" topics_ns="camera_1">
+    <origin xyz="1.25 0 0.6" rpy="0 ${pi/12} ${pi}"/>
+  </xacro:sensor_d435>
+
+  <xacro:sensor_d435 parent="world" name="camera_2" topics_ns="camera_2">
+    <origin xyz="-1.25 0 0.6" rpy="0 ${pi/12} 0.0"/>
+  </xacro:sensor_d435>
+
+
   <link name="world" />
 
   <link name="pedestal">
