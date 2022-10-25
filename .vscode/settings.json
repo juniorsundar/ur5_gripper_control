@@ -1,0 +1,7 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/juniorsundar/ROS_Workspaces/honestAG_task/devel/lib/python3/dist-packages",
+        "/home/juniorsundar/ROS_Workspaces/MMT/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

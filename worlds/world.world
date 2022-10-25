@@ -7,7 +7,7 @@
         </include>
 
         <light name='booth_sun' type='point'>
-            <pose>0.0 0.0 3 0 -0 0</pose>
+            <pose>0.0 0.0 1.5 0 -0 0</pose>
             <diffuse>0.7 0.7 0.7 0</diffuse>
             <specular>1 1 1 0</specular>
             <attenuation>
@@ -246,7 +246,7 @@
                 <visual name='visual'>
                     <geometry>
                         <box>
-                            <size>0.2 0.2 1</size>
+                            <size>0.2 0.2 0.75</size>
                         </box>
                     </geometry>
                     <material>
@@ -272,7 +272,7 @@
                     <pose>-0.3 0.3 0.5 0 0 0</pose>
                     <geometry>
                         <box>
-                            <size>0.2 0.2 1</size>
+                            <size>0.2 0.2 0.75</size>
                         </box>
                     </geometry>
                     <surface>
@@ -348,7 +348,7 @@
                 <visual name='visual'>
                     <geometry>
                         <box>
-                            <size>0.2 0.2 1</size>
+                            <size>0.2 0.2 0.75</size>
                         </box>
                     </geometry>
                     <material>
@@ -374,7 +374,7 @@
                     <pose>-0.3 0.3 0.5 0 0 0</pose>
                     <geometry>
                         <box>
-                            <size>0.2 0.2 1</size>
+                            <size>0.2 0.2 0.75</size>
                         </box>
                     </geometry>
                     <surface>
@@ -432,7 +432,7 @@
             <link name='my_box'>
                 <inertial>
                     <pose>0 0 0.0145 0 0 0</pose>
-                    <mass>0.001</mass>
+                    <mass>0.0001</mass>
                     <inertia>
                         <ixx>0.0001</ixx>
                         <ixy>0</ixy>
