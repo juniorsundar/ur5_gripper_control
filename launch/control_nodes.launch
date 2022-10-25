@@ -1,6 +1,6 @@
 <launch>
 
-<node name="pick_place" pkg="ur5_control" type="pick_place.py" respawn="true"/>
-<node name="publish_octomap_cloud" pkg="ur5_control" type="publish_octomap_cloud.py" respawn="true"/>
+<node name="pick_place" pkg="ur5_gripper_control" type="pick_place.py" respawn="true"/>
+<node name="publish_octomap_cloud" pkg="ur5_gripper_control" type="publish_octomap_cloud.py" respawn="true"/>
     
 </launch>

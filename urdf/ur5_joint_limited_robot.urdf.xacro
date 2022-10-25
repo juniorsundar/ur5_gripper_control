@@ -8,7 +8,7 @@
   <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
 
   <!-- ur5 -->
-  <xacro:include filename="$(find ur5_control)/urdf/ur5.urdf.xacro" />
+  <xacro:include filename="$(find ur5_gripper_control)/urdf/ur5.urdf.xacro" />
 
   <!-- arm -->
   <xacro:ur5_robot prefix="" joint_limited="true"
@@ -22,8 +22,8 @@
   />
 
   <!-- Realsense Camera -->
-  <xacro:include filename="$(find ur5_control)/urdf/_d435.urdf.xacro" />
-  <xacro:include filename="$(find ur5_control)/urdf/stereo_camera.urdf.xacro" />
+  <xacro:include filename="$(find ur5_gripper_control)/urdf/_d435.urdf.xacro" />
+  <xacro:include filename="$(find ur5_gripper_control)/urdf/stereo_camera.urdf.xacro" />
 
   <xacro:sensor_d435 parent="world" name="camera_1_depth" topics_ns="camera_1_depth">
     <origin xyz="1.25 0 1.5" rpy="0 ${pi/6} ${pi}"/>

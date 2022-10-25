@@ -2,7 +2,7 @@
 <!-- XML namespaces -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   
-  <xacro:include filename="$(find ur5_control)/urdf/wge100_camera.gazebo.xacro" />
+  <xacro:include filename="$(find ur5_gripper_control)/urdf/wge100_camera.gazebo.xacro" />
 
   <!-- hack_baseline is used to simulate right stereo camera projection matrix translation to left stereo camera frame, currently on the hardware,
        custom left stereo camera frame_id is passed to right stereo wge100 camera node at launch time, baseline is stored on the camera. -->

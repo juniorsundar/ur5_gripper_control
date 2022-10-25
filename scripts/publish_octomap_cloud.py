@@ -6,7 +6,7 @@ import ros_numpy
 import rospy
 from std_msgs.msg import Empty
 from sensor_msgs.msg import PointCloud2, Image
-from ur5_control.srv import FilterWorkspace, FilterWorkspaceRequest
+from ur5_gripper_control.srv import FilterWorkspace, FilterWorkspaceRequest
 
 def filter_incoming_cloud(req: FilterWorkspaceRequest):
     """Filter workspace to exclude red block. 

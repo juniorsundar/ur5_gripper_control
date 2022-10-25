@@ -1,6 +1,6 @@
 <package>
 
-  <name>ur5_control</name>
+  <name>ur5_gripper_control</name>
   <version>0.3.0</version>
   <description>
     Control driver package

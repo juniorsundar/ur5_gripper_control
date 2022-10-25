@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot name="ur5" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ur5_control)/urdf/ur5_joint_limited_robot.urdf.xacro" />
-  <xacro:include filename="$(find ur5_control)/urdf/robotiq_85_gripper.urdf.xacro" />
+  <xacro:include filename="$(find ur5_gripper_control)/urdf/ur5_joint_limited_robot.urdf.xacro" />
+  <xacro:include filename="$(find ur5_gripper_control)/urdf/robotiq_85_gripper.urdf.xacro" />
   
   <!-- Robotiq Coupler -->
   <!--  + Height added by the coupler: 8mm -->

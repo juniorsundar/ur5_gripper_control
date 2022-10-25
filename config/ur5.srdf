@@ -25,7 +25,7 @@
         <joint name="wrist_3_joint" value="0" />
     </group_state>
     <group_state name="closed" group="gripper">
-        <joint name="robotiq_85_left_knuckle_joint" value="0.37" />
+        <joint name="robotiq_85_left_knuckle_joint" value="0.36" />
     </group_state>
     <group_state name="open" group="gripper">
         <joint name="robotiq_85_left_knuckle_joint" value="0.0" />

@@ -6,5 +6,5 @@
   <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
 
   <!-- loads ros_controllers to the param server -->
-  <rosparam file="$(find ur5_control)/config/ros_controllers.yaml"/>
+  <rosparam file="$(find ur5_gripper_control)/config/ros_controllers.yaml"/>
 </launch>

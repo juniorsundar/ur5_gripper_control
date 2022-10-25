@@ -7,7 +7,7 @@ from geometry_msgs.msg import Pose, PoseStamped
 from std_msgs.msg import Header
 from moveit_msgs.msg import DisplayTrajectory
 from std_srvs.srv import Empty
-from ur5_control.srv import FilterWorkspace, FilterWorkspaceRequest
+from ur5_gripper_control.srv import FilterWorkspace, FilterWorkspaceRequest
 
 def update_octomap():
     """Update octomap in moveit planning scene.

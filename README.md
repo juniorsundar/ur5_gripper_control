@@ -1,4 +1,4 @@
-# ur5_planning_octomap
+# ur5_gripper_control
 
 [Universal Robots ROS Industrial](https://github.com/ros-industrial/universal_robot)
 
