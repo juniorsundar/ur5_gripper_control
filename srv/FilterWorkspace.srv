@@ -1,0 +1,5 @@
+std_msgs/String pointcloud_topic
+std_msgs/String image_topic
+
+---
+sensor_msgs/PointCloud2 filtered

@@ -1,0 +1,29 @@
+# The name of this file shouldn't be changed, or else the Setup Assistant won't detect it
+sensors:
+  # - filtered_cloud_topic: filtered_cloud
+  #   max_range: 2.5
+  #   max_update_rate: 5.0
+  #   padding_offset: 0.05
+  #   padding_scale: 1.0
+  #   # point_cloud_topic: /camera_1/points2
+  #   point_cloud_topic: /camera_1/depth/color/points
+  #   point_subsample: 1
+  #   sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+  # - filtered_cloud_topic: filtered_cloud
+  #   max_range: 2.5
+  #   max_update_rate: 5.0
+  #   padding_offset: 0.05
+  #   padding_scale: 1.0
+  #   # point_cloud_topic: /camera_2/points2
+  #   point_cloud_topic: /camera_2/depth/color/points
+  #   point_subsample: 1
+  #   sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+  - filtered_cloud_topic: filtered_cloud
+    max_range: 2.5
+    max_update_rate: 5.0
+    padding_offset: 0.05
+    padding_scale: 1.0
+    # point_cloud_topic: /camera_2/points2
+    point_cloud_topic: /octomap
+    point_subsample: 1
+    sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater

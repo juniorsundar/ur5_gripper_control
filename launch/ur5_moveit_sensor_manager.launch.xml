@@ -1,0 +1,6 @@
+<launch>
+    <!-- <rosparam command="load" file="$(find ur5_control)/config/sensors_3d.yaml"/>
+    <param name="octomap_frame" type="string" value="odom_combined"/>
+    <param name="octomap_resolution" type="double" value="0.01"/>
+    <param name="max_range" type="double" value="2.0"/> -->
+</launch>
