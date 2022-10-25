@@ -73,13 +73,13 @@
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
 
-  <!-- <node pkg="nodelet" type="nodelet" name="pipeline" args="manager" />
+  <node pkg="nodelet" type="nodelet" name="pipeline" args="manager" />
   <include file="$(find stereo_image_proc)/launch/stereo_image_proc.launch" ns="camera_1_stereo">
     <arg name="manager" value="/pipeline" />
-  </include> -->
-  <!-- <include file="$(find stereo_image_proc)/launch/stereo_image_proc.launch" ns="camera_2_stereo">
+  </include>
+  <include file="$(find stereo_image_proc)/launch/stereo_image_proc.launch" ns="camera_2_stereo">
     <arg name="manager" value="/pipeline" />
-  </include> -->
+  </include>
 
   <include file="$(find ur5_gripper_control)/launch/control_nodes.launch" />
 
