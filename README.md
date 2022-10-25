@@ -14,7 +14,7 @@
 Install prerequisite packages
 
 ```bash
-sudo apt install ros-noetic-ros-numpy ros-noetic-ros-controllers ros-noetic-ros-control ros-noetic-cv-bridge 
+sudo apt install ros-noetic-ros-numpy ros-noetic-ros-controllers ros-noetic-ros-control ros-noetic-cv-bridge ros-noetic-image-proc ros-noetic-image-pipeline
 ```
 
 Initialise the catkin workspace:
