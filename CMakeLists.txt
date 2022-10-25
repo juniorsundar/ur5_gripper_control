@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 3.1.3)
 project(ur5_control)
 
 find_package(catkin REQUIRED COMPONENTS
+  moveit_core
+  moveit_ros_planning
+  moveit_ros_planning_interface
+  moveit_ros_perception
+  rviz_visual_tools
+  moveit_visual_tools
   cv_bridge
   geometry_msgs
   image_transport
@@ -19,6 +25,8 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(OpenCV REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(Boost REQUIRED system filesystem date_time thread)
 
 add_service_files(
   FILES
@@ -34,21 +42,21 @@ generate_messages(
 
 catkin_package(
   # INCLUDE_DIRS include
-  CATKIN_DEPENDS cv_bridge roscpp std_msgs sensor_msgs geometry_msgs message_runtime
-#   DEPENDS OpenCV
+  CATKIN_DEPENDS cv_bridge roscpp std_msgs sensor_msgs geometry_msgs message_runtime moveit_core moveit_visual_tools moveit_ros_planning_interface
+  DEPENDS 
+    EIGEN3
 )
 
-include_directories(
-  include  
-  ${catkin_INCLUDE_DIRS}
-  ${OpenCV_INCLUDE_DIRS}
-)
+include_directories(SYSTEM ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 link_directories(
   ${OpenCV_LIBRARY_DIRS}
   )
 add_definitions(
   ${OpenCV_DEFINITIONS}
   )
+
+add_executable(pick_place src/pick_place.cpp)
+target_link_libraries(pick_place ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
 catkin_install_python(PROGRAMS scripts/publish_octomap_cloud.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

@@ -41,7 +41,7 @@ controller_list:
     joints:
       - robotiq_85_left_knuckle_joint
 ur5_arm_controller:
-  type: position_controllers/JointTrajectoryController
+  type: effort_controllers/JointTrajectoryController
   joints:
     - shoulder_pan_joint
     - shoulder_lift_joint
@@ -49,6 +49,15 @@ ur5_arm_controller:
     - wrist_1_joint
     - wrist_2_joint
     - wrist_3_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0
+    shoulder_pan_joint: {trajectory: 0.1, goal: 0.01}
+    shoulder_lift_joint: {trajectory: 0.1, goal: 0.01}
+    elbow_joint: {trajectory: 0.1, goal: 0.01}
+    wrist_1_joint: {trajectory: 0.1, goal: 0.01}
+    wrist_2_joint: {trajectory: 0.1, goal: 0.01}
+    wrist_3_joint: {trajectory: 0.1, goal: 0.01}
   gains:
     shoulder_pan_joint:
       p: 1000
@@ -81,12 +90,12 @@ ur5_arm_controller:
       i: 0.1
       i_clamp: 100
 gripper_controller:
-  type: position_controllers/JointTrajectoryController
+  type: effort_controllers/JointTrajectoryController
   joints:
     - robotiq_85_left_knuckle_joint
   gains:
     robotiq_85_left_knuckle_joint:
-      p: 40
+      p: 80
       d: 0
       i: 0
       i_clamp: 1

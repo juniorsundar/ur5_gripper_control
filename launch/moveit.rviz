@@ -3,7 +3,9 @@ Panels:
     Help Height: 84
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /MotionPlanning1
+        - /MotionPlanning1/Planning Request1
       Splitter Ratio: 0.7425600290298462
     Tree Height: 266
   - Class: rviz/Help
@@ -78,27 +80,133 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          camera_1_l_stereo_camera_frame:
+          camera_1_depth_bottom_screw_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_l_stereo_camera_optical_frame:
+          camera_1_depth_color_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_link:
+          camera_1_depth_color_optical_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_optical_frame:
+          camera_1_depth_depth_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_r_stereo_camera_frame:
+          camera_1_depth_depth_optical_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_r_stereo_camera_optical_frame:
+          camera_1_depth_left_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_depth_left_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_depth_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_1_depth_right_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_depth_right_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_l_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_l_stereo_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_r_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_r_stereo_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_left_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_left_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_2_depth_right_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_right_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_l_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_l_stereo_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_r_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_r_stereo_camera_optical_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -221,9 +329,9 @@ Visualization Manager:
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
         Goal State Color: 250; 128; 0
-        Interactive Marker Size: 0
+        Interactive Marker Size: 0.25
         Joint Violation Color: 255; 0; 255
-        Planning Group: gripper
+        Planning Group: ur5_arm
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -255,27 +363,133 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          camera_1_l_stereo_camera_frame:
+          camera_1_depth_bottom_screw_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_l_stereo_camera_optical_frame:
+          camera_1_depth_color_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_link:
+          camera_1_depth_color_optical_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_optical_frame:
+          camera_1_depth_depth_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_r_stereo_camera_frame:
+          camera_1_depth_depth_optical_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          camera_1_r_stereo_camera_optical_frame:
+          camera_1_depth_left_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_depth_left_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_depth_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_1_depth_right_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_depth_right_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_l_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_l_stereo_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_r_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_1_stereo_r_stereo_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_bottom_screw_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_color_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_color_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_depth_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_depth_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_left_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_left_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          camera_2_depth_right_ir_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_depth_right_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_l_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_l_stereo_camera_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_r_stereo_camera_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          camera_2_stereo_r_stereo_camera_optical_frame:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -414,9 +628,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.48479601740837097
+      Pitch: 0.07479607313871384
       Target Frame: world
-      Yaw: 5.589963436126709
+      Yaw: 6.224965572357178
     Saved: ~
 Window Geometry:
   Displays:
