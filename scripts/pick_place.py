@@ -161,6 +161,24 @@ if __name__ == "__main__":
         
         rospy.sleep(1)
 
+        # Raise hand
+        update_octomap()
+        pose_goal.position.z = 0.5
+        arm_group.set_max_velocity_scaling_factor(0.1)
+        arm_group.set_pose_target(pose_goal)
+        plan = arm_group.plan()
+        success = arm_group.execute(plan[1], wait=True)
+        arm_group.stop()
+        arm_group.clear_pose_targets()
+        while not success:  # FALLBACK FOR SAFETY
+            arm_group.set_pose_target(pose_goal)
+            plan = arm_group.plan()
+            success = arm_group.execute(plan[1], wait=True)
+            arm_group.stop()
+            arm_group.clear_pose_targets()
+            
+        rospy.sleep(1)
+
         # Return to home
         update_octomap()
         plan = arm_group.plan(home_state)
