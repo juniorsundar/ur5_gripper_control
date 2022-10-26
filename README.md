@@ -52,6 +52,7 @@ To launch the robot and environment, and run the pick-and-place operation:
 ```bash
 roslaunch ur5_gripper_control simulation.launch
 ```
+![video](./img/example_movement.gif)
 
 The nuances of how this works are explained below.
 
@@ -127,3 +128,4 @@ This repository depends on:
 - [Universal Robots Description](https://github.com/ros-industrial/universal_robot) from [ROS-Industrial](https://github.com/ros-industrial),
 - The forked [Robotiq Gripper Description](https://github.com/filesmuggler/robotiq) by [Krzysztof Stężała](https://github.com/filesmuggler),
 - [Realsense Gazebo Plugin](https://github.com/issaiass/realsense_gazebo_plugin) by [Rangel Isaías Alvarado Walles](https://github.com/issaiass)
+- [PR2 Camera Descriptions](https://github.com/PR2) by [PR2](https://github.com/PR2/pr2_common.git)

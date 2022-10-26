@@ -88,8 +88,6 @@ if __name__ == "__main__":
             success = arm_group.execute(plan[1], wait=True)
             arm_group.stop()
             arm_group.clear_pose_targets()
-
-        rospy.sleep(1)
         
         # Close gripper
         update_octomap()
@@ -121,23 +119,6 @@ if __name__ == "__main__":
         update_octomap()
         pose_goal.position.x = -0.6
         arm_group.set_max_velocity_scaling_factor(0.2)
-        arm_group.set_pose_target(pose_goal)
-        plan = arm_group.plan()
-        success = arm_group.execute(plan[1], wait=True)
-        arm_group.stop()
-        arm_group.clear_pose_targets()
-        while not success:  # FALLBACK FOR SAFETY
-            arm_group.set_pose_target(pose_goal)
-            plan = arm_group.plan()
-            success = arm_group.execute(plan[1], wait=True)
-            arm_group.stop()
-            arm_group.clear_pose_targets()
-
-        rospy.sleep(1)
-
-        # Lower block
-        update_octomap()
-        pose_goal.position.z = 0.34
         arm_group.set_pose_target(pose_goal)
         plan = arm_group.plan()
         success = arm_group.execute(plan[1], wait=True)
